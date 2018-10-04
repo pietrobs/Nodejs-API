@@ -64,24 +64,24 @@ app.post('/todo', async (req, res) => {
     }
 });
 
-app.put('/todo', async (req, res) => {
-    try {
-        
-        let updatedTodo = await ToDo.updateOne({ _id: req.body._id }, { is_complete: req.body.is_complete });
+// app.put('/todo', async (req, res) => {
+//     try {
 
-        res.json({
-            success: true,
-            message: "ToDo alterado com sucesso!"
-        });
+//         let updatedTodo = await ToDo.updateOne({ _id: req.body._id }, { is_complete: req.body.is_complete });
 
-    } catch (err) {
+//         res.json({
+//             success: true,
+//             message: "ToDo alterado com sucesso!"
+//         });
 
-        res.json({
-            success: false,
-            message: err.message
-        })
-    }
-})
+//     } catch (err) {
+
+//         res.json({
+//             success: false,
+//             message: err.message
+//         })
+//     }
+// });
 
 
 
